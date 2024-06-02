@@ -3,12 +3,15 @@ package com.learning.petclinic.petclinic.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.learning.petclinic.petclinic.model.PetClinic;
+import com.learning.petclinic.petclinic.entity.PetClinic;
 
 @Service
 public class PetClinicService {
+    @Autowired
+    UserInfoUserDetailsService userDetailsService;
     
     public List<PetClinic> getAllPetClinicData() {
         List<PetClinic> petData = new ArrayList<>();
